@@ -24,5 +24,6 @@ class Mitm_Listener(Process):
                     "-s",program_dir() + "listener.py"]
                     +(["--set", "stream_large_bodies=1"] if STREAMING else [])
                     +([] if DEBUG else ["-q"])
+                    +(["--mode","transparent"] if TRANSPARENT else [])
                     +(["--mode", f"upstream:http://{FRONT_PROXY_HOST}:{FRONT_PROXY_PORT}"] if UPSTREAM else []))
         # -q console will not show

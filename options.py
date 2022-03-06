@@ -9,4 +9,5 @@ COMM_PORT = 5000
 AUTO_MODE = True
 DEBUG = False
 UPSTREAM = True
+TRANSPARENT = True # if this is True, UPSTREAM must be true
 STREAMING = False
